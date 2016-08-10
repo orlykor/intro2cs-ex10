@@ -1,0 +1,66 @@
+orlykor12
+203595541
+orly koren
+
+I discussed the exercise with: tuvia newman, hofit bata, gal kaplon
+
+=============================
+=  README for ex10=
+=============================
+
+usage: python3.3
+
+==================
+=  Description:  =
+==================
+
+this ex. we did 3 parts:
+in the first part we did the class WordExtractor, which uses an iterator that
+takes from a file all the words in it, then returns them. that way we get all
+the words written in the chosen text file.
+
+part 2- 
+we did the class WordTracker, which get a list of words, then it checks if the
+words in the list are the same as the words in our file. basically this class
+is used for checking if there is a file with the same words that we are looking
+for (the list of words).
+ 
+part 3-
+we use the class PathScanner that plays as an iterator which iterates over all
+the directories and files in a given path. with that we use the other funcs.
+we check to see all the depth of a file and we find a file in the full depth
+of the given path which contains all the words in word_list.
+
+
+=============================
+=  List of submitted files: =
+=============================
+
+WordTracker.py
+WordExtractor.py
+PathScanner.py
+README
+
+
+======================
+=  Special Comments  =
+======================
+
+Complexity:
+__contains__-  i used the sorted list i made in the init func, inorder to check
+in the function "binary search" if the given word is in the sorted list or not.
+the complexity in the binary search is at the most top O(nlog(n)).
+
+in order to do that func in a complexity of O(nlog(n)) at the most, i needed
+to add more funcs, that helped me get a sorted list and a binary search. if i
+wouldnt use them, my complexity would be much more. moreover, in order to do
+this func no more then O(nlog(n)), i needed to sort the list only one time,
+for that i did it in the init func and not in the contains func. i used the
+quicksort func with runs at the low O(nlog(n)) but at the most On^2.
+
+encounter - O(n). because we use insert and it has the complexity of O(n),
+with n length of a list.
+
+encountered_all- O(1) because we only do one comparison.
+
+reset: O(1) - because we only do one operation - we compare.
